@@ -12,18 +12,17 @@ import org.testng.annotations.Test;
 import com.beust.jcommander.Parameter;
 
 
-public class Login
+public class Login2
 
 {
 	
 WebDriver driver;
-String browser = System.getProperty("browser");
 
 @ BeforeTest
-//@Parameters (  "browser" )
-public void p1() 
+@Parameters (  "browser" )
+public void p1(String browser) 
 {
-	System.out.println(browser);
+	System.err.println(browser);
 	driver = new ChromeDriver();
 	driver.get("https://www.facebook.com/");
 }
